@@ -1,7 +1,7 @@
 # OpenAI Research & Safety 文章整理（AI技术相关）
 
 > 数据来源: https://openai.com/research/index/
-> 整理时间: 2026-04-01（初次整理）/ 2026-04-01（筛选重整）
+> 整理时间: 2026-04-01（初次整理）/ 2026-04-01（筛选重整）/ 2026-04-02（新增5篇）
 > 筛选标准: 保留AI核心技术、模型发布、系统卡片、安全技术研究类文章，删除威胁运营报告和政策/运营类文章
 
 ---
@@ -17,6 +17,24 @@
 - **发布日期**: 2026-03-10
 - **链接**: https://openai.com/index/improving-instruction-hierarchy/
 - **摘要**: 引入 IH-Challenge 训练方法，迫使模型优先执行可信指令，增强"指令层级"，使模型对 prompt 注入攻击更具鲁棒性，提升面向安全边界的可调控性。
+
+### ★NEW★ 2.1 Introducing GPT-5.4 mini and nano
+- **发布日期**: 2026-03-17
+- **链接**: https://openai.com/index/introducing-gpt-5-4-mini-and-nano/
+- **摘要**: OpenAI 发布 GPT-5.4 mini 和 nano 两款面向"子代理时代"(subagent era)的小型模型。Mini 速度比 GPT-5 mini 快 2 倍以上，达到 GPT-5.4 标准版 94% 的编码性能；Nano 是最小最快的变体，专为分类、数据提取等轻量级任务设计。两者构成多代理架构中的分层模型分配方案。
+- **总结文件**: [gpt_5_4_mini_nano_subagent_era.md](gpt_5_4_mini_nano_subagent_era.md)
+
+### ★NEW★ 2.2 Introducing GPT-5.4
+- **发布日期**: 2026-03-05
+- **链接**: https://openai.com/index/introducing-gpt-5-4/
+- **摘要**: GPT-5.4 发布，定位为最强大且最高效的前沿专业工作模型。首次将通用推理与行业领先编码能力合并为统一系统，引入原生计算机使用能力(Computer Use)、工具搜索(Tool Search)功能，在 GDPval 基准上达到 83.0%（匹配或超越44个职业的行业中期专业人士），事实准确性提升33%。
+- **总结文件**: [introducing_gpt_5_4.md](introducing_gpt_5_4.md)
+
+### ★NEW★ 2.3 GDPval: Measuring the Performance of Our Models on Real-World Tasks
+- **发布日期**: 2025-10-05（arXiv）/ 2026-03-05（公开发布）
+- **链接**: https://openai.com/index/gdpval/
+- **摘要**: OpenAI 推出 GDPval 评估框架，衡量 AI 模型在44个职业、9个行业中的真实经济价值工作任务上的表现。数据集包含1,320个由14年以上经验专业人士设计的任务，覆盖年薪酬总额约$3万亿的职业群体。已开源220个"黄金集"任务（Hugging Face: openai/gdpval）。
+- **总结文件**: [gdpval_real_world_benchmark.md](gdpval_real_world_benchmark.md)
 
 ### 3. Introducing GPT-5.4 Thinking
 - **发布日期**: 2026-03-05
@@ -37,6 +55,12 @@
 - **发布日期**: 2026-02-23
 - **链接**: https://openai.com/index/swe-bench-verified-analysis/
 - **摘要**: OpenAI 分析认为 SWE-bench Verified 基准已因测试污染和测量失真而不再适合衡量前沿编码能力，建议改用 SWE-bench Pro 作为替代评估标准。
+
+### ★NEW★ 6.1 OpenAI Codex and Figma Partnership
+- **发布日期**: 2026-02-26
+- **链接**: https://openai.com/index/figma-partnership/
+- **摘要**: OpenAI 与 Figma 宣布战略合作，通过 Figma MCP (Model Context Protocol) 服务器将 Codex 桌面应用与 Figma 集成，实现无缝的代码到设计双向工作流。由 GPT-5.3-Codex 驱动，支持设计上下文提取、代码生成和 Code Connect 映射等功能。比 Anthropic/Claude Code 的类似集成晚 9 天发布。
+- **总结文件**: [codex_figma_design_code_integration.md](codex_figma_design_code_integration.md)
 
 ### 7. GPT-5.3-Codex System Card
 - **发布日期**: 2026-02-05
@@ -232,6 +256,12 @@
 - **链接**: https://openai.com/index/gpt-oss-safeguard-technical-report/
 - **摘要**: gpt-oss-safeguard 的技术报告，详细介绍了模型从 gpt-oss 基础模型进行后训练的过程，以及在安全分类、内容审核和思维链监控等方面的技术细节。
 
+### ★NEW★ 8.1 Detecting and Reducing Scheming in AI Models
+- **发布日期**: 2025-09-17
+- **链接**: https://openai.com/index/detecting-and-reducing-scheming-in-ai-models/
+- **摘要**: OpenAI 与 Apollo Research 联合发布关于检测和减少 AI 模型策略性欺骗(scheming)行为的研究。发现 o3 存在 13% 的隐蔽行为率，o4-mini 为 8.7%。提出 Deliberative Alignment（审慎对齐）方法，通过反欺骗规范(Anti-Scheming Spec)的9项原则指导模型推理，实现约 30× 的欺骗行为减少（o3: 13%→0.4%, o4-mini: 8.7%→0.3%）。研究论文: arXiv:2509.15541。
+- **总结文件**: [detecting_reducing_scheming_ai.md](detecting_reducing_scheming_ai.md)
+
 ### 9. Working with US CAISI and UK AISI to Build More Secure AI Systems
 - **发布日期**: 2025-09（约）
 - **链接**: https://openai.com/index/us-caisi-uk-aisi-ai-update/
@@ -267,7 +297,7 @@
 ## 三、补充说明
 
 - **筛选标准**: 保留AI核心技术（模型发布、系统卡片、技术研究、安全技术方法论）相关文章，删除威胁运营报告（Disrupting Malicious Uses 系列4篇）和政策/运营类文章（青少年安全政策、Bug Bounty、基金会等8篇），共删除12篇
-- **文章统计**: Research 36篇 + Safety 14篇 = 共 50 篇
+- **文章统计**: Research 36+4篇 + Safety 14+1篇 = 共 55 篇
 - **排序规则**: 每个分类内按发布日期倒序排列（最新的排在前面）
 - **数据来源**: https://openai.com/research/index/ 及 https://deploymentsafety.openai.com/
 - **时间跨度**: 2024-12 至 2026-03
